@@ -11,12 +11,20 @@
   </head>
   <body>
     <section class="main">
-      <button id="show-popup-form" class="btn btn-main">Click me!</button>
+      <button onclick="popPopup()" id="show-popup-form" class="btn btn-main">Click me!</button>
       <!-- Display success message below -->
     </section>
-    <div class="popup">
-      <!-- Here goes your popup form HTML code -->
+    <div class="popup" id="theOne">
+      <div id="close" onclick="hide(false)"><b>x</b></div>
+		  <div id="popupTitle">Login</div>
+		  <form name="popupForm" action="index.php"  method="POST" onsubmit="login()">
+			    <input class="dataBox" name="login" type="text" placeholder="Login" ></input>
+		      <input class="dataBox" name="password" type="password" placeholder="Password" ></input><br />
+          <div class="checkBox"><input name="confirmation" type="checkbox">  <label for="confirmation"> I agree to terms & conditions.</label></div>
+	  		  <input id="popupBoxSubmit" type="submit" value="SUBMIT"></input>
+		  </form>
     </div>
     <script src="js/index.min.js" charset="utf-8"></script>
+    <script>hide(false);</script>
   </body>
 </html>
