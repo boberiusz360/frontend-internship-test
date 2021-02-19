@@ -1,19 +1,20 @@
 /* Here goes your JS code */
 /* Here I go... */
 
-//var loaded = false;
-
 // vPos - vertical position hPos - horizontal position
-function hide(loaded)
+
+
+var wait = false;
+
+function hide()
 {
-	if(!loaded)
+	if(wait == false)
 	{
 		var vPos = window.innerHeight;
 		vPos += 350;
 		vPos -= 2 * vPos;
 		var output = vPos + "px";
 		document.getElementById("theOne").style.top = output;
-		loaded = true;
 	}
 	return;
 }
@@ -28,5 +29,14 @@ function popPopup()
 	var hOutput = hPos + "px";
 	document.getElementById("theOne").style.top = vOutput;
 	document.getElementById("theOne").style.left = hOutput;
+	return;
+}
+
+function doThings()
+{
+	var email = document.forms["popupForm"]["login"].value;
+	var pass = document.forms["popupForm"]["password"].value;
+	var greg = document.forms["popupForm"]["Greg"].checked;
+	if((email != "")&&(pass != "")&&(greg)){alert(email);}
 	return;
 }

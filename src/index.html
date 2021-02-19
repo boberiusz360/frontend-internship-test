@@ -15,16 +15,22 @@
       <!-- Display success message below -->
     </section>
     <div class="popup" id="theOne">
-      <div id="close" onclick="hide(false)"><b>x</b></div>
+      <div id="close" onclick="hide()">x</div>
 		  <div id="popupTitle">Login</div>
-		  <form name="popupForm" action="index.php"  method="POST" onsubmit="login()">
-			    <input class="dataBox" name="login" type="text" placeholder="Login" ></input>
+		  <form name="popupForm" onsubmit="doThings()">
+			    <input class="dataBox" name="login" type="text" placeholder="E-mail" ></input>
 		      <input class="dataBox" name="password" type="password" placeholder="Password" ></input><br />
-          <div class="checkBox"><input name="confirmation" type="checkbox">  <label for="confirmation"> I agree to terms & conditions.</label></div>
+    
+          <label class="container"> I agree to terms & conditions.
+            <input name="Greg" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+    
+    
 	  		  <input id="popupBoxSubmit" type="submit" value="SUBMIT"></input>
 		  </form>
     </div>
     <script src="js/index.min.js" charset="utf-8"></script>
-    <script>hide(false);</script>
+    <script>hide();</script>
   </body>
 </html>
