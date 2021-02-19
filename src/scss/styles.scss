@@ -1,6 +1,12 @@
 // Here goes your CSS
 @import 'layout/main';
 
+.main
+{
+	font-family: "Lobster", cursive;
+	font-size:42px;
+}
+
 .popup
 {
 	position:absolute;
@@ -126,4 +132,35 @@
 {
 	background-color: #FFA17F;
 	border: 1px solid #FFA17F;
+}
+
+#impostor
+{
+	position:relative;
+	background-color:white;
+	border-radius:5px;
+	width:20px;
+	height:30px;
+	left:140px;
+	top:160px;
+}
+
+#impostorFrame
+{
+	position:absolute;
+	z-index:9;
+	width:300px;
+	height:350px;
+}
+
+@keyframes impostorRising
+{
+	from{left:140px;width:20px;top:160px;height:30px;}
+	to{left:0px;width:300px;top:0px;height:350px;}
+}
+
+@keyframes impostorEscape
+{
+	from{left:0px;width:300px;top:0px;height:350px;}
+	to{left:140px;width:20px;top:160px;height:30px;}
 }
